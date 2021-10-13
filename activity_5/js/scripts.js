@@ -11,9 +11,9 @@ var data = [
         description: 'This tool shows you a visual plot of commits in your current file over time. You can click on the timeplot, or hover over it and see all of the commits for a specific time range. You can also view the git-diff between the current version and the previous version, once a selection is made. ',
         author: 'littlebee',
         url: 'https://atom.io/packages/git-time-machine',
-        downloads: '429611',
-        stars: '1052',
-        price: 'free',
+        downloads: 429611,
+        stars: 1052,
+        price: 0.00,
         selector:'p1' 
     },
     {
@@ -21,9 +21,9 @@ var data = [
         description: 'The Pane Layout Plus package allows you to easily organize and control the distribution of multiple panes in Atom. This package has shortcuts to jump between columns, and set column layouts. ',
         author: 'chemoish',
         url: 'https://atom.io/packages/pane-layout-plus',
-        downloads: '34127',
-        stars: '63',
-        price: 'free',
+        downloads: 34127,
+        stars: 63,
+        price: 0.00,
         selector:'p2' 
     }
 ];
