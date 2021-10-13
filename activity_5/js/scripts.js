@@ -18,7 +18,7 @@ var data = [
     },
     {
         name: 'pane-layout-plus',
-        description: 'The Pane Layout Plus package allows you to easily organize and control the distribution of multiple panes in Atom. This package has shortcuts to jump between columns, and set column layouts. ',
+        description: 'The Pane Layout Plus package allows you to easily organize and control the distribution of multiple panes in Atom. This package has shortcuts to jump between columns, and set column layouts.',
         author: 'chemoish',
         url: 'https://atom.io/packages/pane-layout-plus',
         downloads: 34127,
@@ -55,10 +55,10 @@ this.getFormattedStars = function(){
 var getTodaysDate = function(){
     var today = new Date();
     return today.toDateString();
-};
+}
 
 // Return DOM element ID
-var getEl = function (id){
+var getEl = function (id) {
     return document.getElementById(id);
 }
 
@@ -83,10 +83,19 @@ starsEl.textContent = package.getFormattedStars();
     dateEl = getEl('date');
     dateEl.textContent = getTodaysDate();
 
+/*// one by one
+var git = new Package(data[0]);
+writePackageInfo(git);
+
+var pane = new Package(data[1]);
+writePackageInfo(pane);
+*/
+
 // For loop
 for (var i = 0; i < data.length; i++){
     var package = new Package(data[i]);
     writePackageInfo(package);
 }
+
 
 });
