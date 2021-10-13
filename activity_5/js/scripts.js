@@ -62,6 +62,7 @@ var getEl = function (id) {
     return document.getElementById(id);
 }
 
+
 // Reference to DOM elements
 var writePackageInfo = function(package){
     var selector = package.selector,
