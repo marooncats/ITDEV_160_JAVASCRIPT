@@ -64,35 +64,27 @@ var getEl = function (id) {
 
 // Reference to DOM elements
 var writePackageInfo = function(package){
-var selector = package.selector,
-    nameEl = getEl(selector + '-name'),
-    descEl = getEl(selector + '-description'),
-    authEl = getEl(selector + '-author'),
-    downloadEl = getEl(selector + '-downloads'),
-    starsEl = getEl(selector + '-stars');
+    var selector = package.selector,
+        nameEl = getEl(selector + '-name'),
+        descEl = getEl(selector + '-description'),
+        authEl = getEl(selector + '-author'),
+        downloadEl = getEl(selector + '-downloads'),
+        starsEl = getEl(selector + '-stars');
 
-// package data DOM elements
-nameEl.textContent = package.name;
-descEl.textContent = package.description;
-authEl.textContent = package.author;
-downloadEl.textContent = package.getFormattedDownloads();
-starsEl.textContent = package.getFormattedStars();
+        // package data DOM elements
+        nameEl.textContent = package.name;
+        descEl.textContent = package.description;
+        authEl.textContent = package.author;
+        downloadEl.textContent = package.getFormattedDownloads();
+        starsEl.textContent = package.getFormattedStars();
 }
 
 // Date
     dateEl = getEl('date');
     dateEl.textContent = getTodaysDate();
 
-/*// one by one
-var git = new Package(data[0]);
-writePackageInfo(git);
-
-var pane = new Package(data[1]);
-writePackageInfo(pane);
-*/
-
 // For loop
-for (var i = 0; i < data.length; i++){
+for (var i = 0; i < data.length; i++) {
     var package = new Package(data[i]);
     writePackageInfo(package);
 }
