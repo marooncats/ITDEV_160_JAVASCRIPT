@@ -1,6 +1,5 @@
 /**
  * Author: Danielle Leslie
- * Wrap everything in an IIFE {Immediately Invoked Function Expression} to keep our variables constrained to the scope of this function and out of the global scope.
  */
 
 (function (){
@@ -15,7 +14,7 @@ var data = [
         downloads: '429611',
         stars: '1052',
         price: 'free',
-        selector:'alt + t' 
+        selector:'p1' 
     },
     {
         name: 'pane-layout-plus',
@@ -25,7 +24,7 @@ var data = [
         downloads: '34127',
         stars: '63',
         price: 'free',
-        selector:'alt + shift + [1-5]' 
+        selector:'p2' 
     }
 ];
 
@@ -79,4 +78,15 @@ authEl.textContent = package.author;
 downloadEl.textContent = package.getFormattedDownloads();
 starsEl.textContent = package.getFormattedStars();
 }
-})
+
+// Date
+    dateEl = getEl('date');
+    dateEl.textContent = getTodaysDate();
+
+// For loop
+for (var i = 0; i < data.length; i++){
+    var package = new Package(data[i]);
+    writePackageInfo(package);
+}
+
+});
