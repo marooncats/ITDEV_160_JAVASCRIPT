@@ -68,6 +68,7 @@ var writePackageInfo = function(package){
         nameEl = getEl(selector + '-name'),
         descEl = getEl(selector + '-description'),
         authEl = getEl(selector + '-author'),
+        urlEl = getEl(selector + '-url'),
         downloadEl = getEl(selector + '-downloads'),
         starsEl = getEl(selector + '-stars');
 
@@ -75,6 +76,7 @@ var writePackageInfo = function(package){
         nameEl.textContent = package.name;
         descEl.textContent = package.description;
         authEl.textContent = package.author;
+        urlEl.textContent = package.url;
         downloadEl.textContent = package.getFormattedDownloads();
         starsEl.textContent = package.getFormattedStars();
 }
