@@ -2,6 +2,7 @@ html {
     background: url(../images/stone-texture.jpg), repeat;
     /*max-width: 100%;*/
     font-family: "Oswald", sans-serif;
+    text-align: center;
 }
 
 img#header-image {
@@ -13,6 +14,15 @@ img#header-image {
 
 img#humane-society {
     width: 10%;
+}
+
+li {
+    width: 200px;
+    margin-left: 810px;
+}
+
+table {
+    margin-left: 200px;
 }
 
 h1 {
@@ -37,6 +47,11 @@ body {
     font-style: italic;
     font-size: 0.75em;
     margin-bottom: 20px;
+}
+
+table {
+    text-align: center;
+    width: 75%;
 }
 
 footer img {

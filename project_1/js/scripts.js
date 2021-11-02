@@ -2,30 +2,21 @@
  * Author: Danielle Leslie
  */
 
+
 (function (){
 
 //Package Data Array
 var data = [
     {
         name: 'wisconsin humane society',
-        description: 'Dogs',
+        description: 'The Wisconsin Humane Society (WHS) is a private nonprofit organization whose mission is to make a difference for animals and the people who love them.',
         url: 'https://www.wihumane.org/about-us',
-        //l1:'1',
-        //l2:'2',
-        //l3:'3',
-        //l4:'4',
-        //l5:'5',
         selector:'p1' 
     },
     {
-            name: 'git-time-machine',
-        description: 'This tool shows you a visual plot of commits in your current file over time. You can click on the timeplot, or hover over it and see all of the commits for a specific time range. You can also view the git-diff between the current version and the previous version, once a selection is made. ',
-        url: 'https://www.wihumane.org/about-us',
-        //l1:'1',
-        //l2:'2',
-        //l3:'3',
-        //l4:'4',
-        //l5:'5',
+        name: 'the womens center',
+        description: 'Founded in 1977, The Women’s Center serves all        impacted  by domestic abuse, sexual violence, child abuse, and trafficking.',
+        url: 'https://twcwaukesha.org/',
         selector:'p2'   
     }
 ];
@@ -35,11 +26,7 @@ function Package(data){
     this.name = data.name;
     this.description = data.description;
     this.url = data.url;
-    //this.l1 = data.l1;
-    //this.l2 = data.l2;
-    //this.l3 = data.l3;
-    //this.l4 = data.l4;
-    //this.l5 = data.l5;
+    this.selector  = data.selector;
 }
 
 /****************************************
@@ -62,21 +49,13 @@ var writePackageInfo = function(package){
         nameEl = getEl(selector + '-name'),
         descEl = getEl(selector + '-description'),
         urlEl = getEl(selector + '-url');
-        //l1El = getEl(selector + '-l1'),
-        //l2El = getEl(selector + '-l2'),
-        //l3El = getEl(selector + '-l3'),
-        //l4El = getEl(selector + '-l4'),
-        //l5El = getEl(selector + '-l5');
+
 
 // package data DOM elements
         nameEl.textContent = package.name;
         descEl.textContent = package.description;
         urlEl.href = package.url;
-        //l1El.textContent = package.l1;
-        //l2El.textContent = package.l2;
-        //l3El.textContent = package.l3;
-        //l4El.textContent = package.l4;
-        //l5El.textContent = package.l5;
+
 }
 
 // Date
