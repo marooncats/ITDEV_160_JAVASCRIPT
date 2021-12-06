@@ -4,8 +4,8 @@ function get(element){
 }
 
 //Application Function
-function openModal(){
-    var model = get('modal-dialog');
+function openModal() {
+    var modal = get('modal-dialog');
     var backdrop = get('modal-backdrop');
 
     modal.classList.add('visible');

@@ -18,7 +18,7 @@ var data = [
 {
     type: messageType.in,
     user: 'Mike',
-    message: 'Hi Danielle! No how about Qdoba?'
+    message: 'Hi Danielle! No, how about Qdoba?'
 },
 {
     type: messageType.out,
@@ -52,10 +52,10 @@ function createMessageElement(message){
 }
 
 // Button click event handler to add new message
-function addMessageHandler(event){
+function addMessageHandler(event) {
     var user, type;
     var messageInput = document.getElementById('message-input');
-    var messageContainerEl = document.getElementById('message-container');
+    var messagesContainerEl = document.getElementById('message-container');
 
     // Determine message type and set message variables accordingly
     switch (event.target.id) {
@@ -73,7 +73,7 @@ function addMessageHandler(event){
     }
 
     //Create new message.
-    if (messageInput.value != ''){
+    if (messageInput.value != '') {
         //Construct a message and add it to the array.
         var message = new Message(type, user, messageInput.value);
         messages.push(message);
@@ -82,7 +82,7 @@ function addMessageHandler(event){
         var el = createMessageElement(message);
 
         //Add the message element to DOM
-        messageContainerEl.appendChild(el);
+        messagesContainerEl.appendChild(el);
 
         //Reset input
         messageInput.value = ' ';
@@ -90,20 +90,20 @@ function addMessageHandler(event){
 }
 
 // Load seed data from data array above (optional)
-function loadSeedData(){
+function loadSeedData() {
     for (var i = 0; i < data.length; i++){
         var message = new Message(data[i].type, data[i].user, data[i].message);
         messages.push(message);
     }
 
     //Load view with preloaded messages
-    var messageContainerEl = document.getElementById('message-container');
+    var messagesContainerEl = document.getElementById('message-container');
 
     for (var i = 0; i < message.length; i++){
         var message = messages[i];
         var el = createMessageElement(message)
 
-        messageContainerEl.appendChild(el);
+        messagesContainerEl.appendChild(el);
     }
 }
 
