@@ -21,6 +21,33 @@ p.linebreak {
   border-style: double;
 }
 
+#topbutton {
+  font-family: "Big Shoulders Display", cursive;
+  position: fixed;
+  bottom: 3%;
+  right: 12%;
+  z-index: 99;
+  font-size: 20px;
+  border: none;
+  outline: none;
+  background-color: #ba4b2f;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  width: 5%;
+  border-radius: 4px;
+  font-size: 20px;
+}
+
+#topbutton a {
+  color: white;
+  text-decoration: none;
+}
+
+#topbutton:hover {
+  background-color: #555;
+}
+
 /* Style the header with a grey background and some padding */
 .header {
   overflow: hidden;
@@ -229,7 +256,7 @@ header .header-title {
 header .header-menu {
   flex-grow: 1;
   display: flex;
-  align-items: center;
+  align-items: left;
   justify-content: flex-end;
   color: #777;
   font-size: smaller;
