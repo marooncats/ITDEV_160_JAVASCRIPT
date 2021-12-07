@@ -13,17 +13,17 @@ var data = [
 {
     type: messageType.out,
     user: 'Handcrafted:',
-    message: 'Hey, do you have any lunch plans?'
+    message: 'You are speaking with Handcrafted. How can we help you today?'
 },
 {
     type: messageType.in,
     user: 'You',
-    message: 'Hi Danielle! No, how about Qdoba?'
+    message: 'Hi there, how can I see what items to donate?'
 },
 {
     type: messageType.out,
-    user: 'Danielle',
-    message: 'Ok, sure lets go!'
+    user: 'Hancrafted',
+    message: 'I am glad to help. Head on over to our donations page for more information on what items to donate and where.'
 }
 ];
 
